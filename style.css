@@ -1,0 +1,126 @@
+:root{
+  --white: #fff;
+  --bg-primary: rgba(153, 150, 150, 0.705);
+  --bg-input: #DCE2E9;
+  --bg-button: #3b3b3a;
+
+  --title-color: #1a1818;
+  --caption-color: #131212;
+  --miss-color: #851313;
+
+  --hover: #4d4d4e;
+
+  --ff-title: 'Montserrat', 'sans-serif';
+  --ff-caption: 'DM Sans', 'sans-serif';
+
+  --fs-title: 24px;
+  --fs-caption: 16px;
+
+  font-size: 62.5%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background: url('https://media3.giphy.com/media/5zoxhCaYbdVHoJkmpf/giphy.gif?cid=ecf05e47cymf1wocihupbzn4e89nk7r96evbiag0261jkhub&rid=giphy.gif&ct=g') no-repeat center/cover;
+  background-color: var(--bg-primary);
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.wrapper{
+  display: flex;
+  width: clamp(30rem, 20rem + 25vw, 42rem);
+  height: 27rem;
+  flex-direction: column;
+  align-items: center;
+  grid-area: 2/2/3/3;
+  background: var(--bg-primary);
+  box-shadow: 3px 3px 16px 4px rgb(0 0 0 / 20%);
+  border-radius: 6px;
+}
+
+.text{
+  text-align: center;
+  width: 30rem;
+  height: 6rem;
+  margin: 48px 64px;
+
+}
+
+.title{
+  font-family: var(--ff-caption);
+  font-size: var(--fs-title);
+  color: var(--title-color);
+  margin-bottom: 16px;
+}
+
+.caption{
+  font-family: var(--ff-caption);
+  font-size: var(--fs-caption);
+  color: var(--caption-color);
+}
+
+.missCaption{
+  font-style: italic;
+  margin-top: 15px;
+  color: var(--miss-color);
+}
+
+.control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 5rem;
+  margin-top: 20px;
+}
+
+form{
+  background-color: var(--bg-input);
+  border-radius: 8px;
+}
+
+#typed-number{
+  width: 42px;
+  height: 53px;
+  background-color: var(--bg-input);
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  font-family: var(--ff-caption);
+  font-weight: 400;
+  font-size: var(--fs-caption);
+  line-height: 21px;
+  text-align: center;
+}
+
+.button{
+  width: 75px;
+  height: 53px;
+  border: none;
+  background: var(--bg-button);
+  border-radius: 0px 4px 4px 0px;
+  color: #fff;
+  font-family: var(--ff-caption);
+  font-weight: 700;
+  font-size: var(--fs-caption);
+  line-height: 21px;
+}
+
+.playAgain{
+  width: 166px;
+  height: 53px;
+  border-radius: 4px;
+}
+
+.button:hover{
+  background: var(--hover);
+}
